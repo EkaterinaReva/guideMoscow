@@ -1,32 +1,32 @@
 import { useState } from 'react';
 import { data } from './data';
-import { photos } from './Carusel';
 import './App.css';
 
 function App() {
 const [restaurants, setRestaurants] = useState(data);
-const [images, getImages] = useState(0);
-const{id,restName, image } = photos[images];
+
+const [picture, getPicture] = useState(0);
+const{ image } = data[picture];
 
 
 const backImage =() => {
-  getImages((images => {
-    images --;
-    if (images < 0) {
-       return photos.length -1;
+  getPicture ((picture => {
+    picture --;
+    if (picture < 0) {
+       return data.length -1;
       
     }
-    return images;
+    return picture;
   }))
 }
  const nextImage =() => {
-  getImages((images =>{
+  getPicture((picture =>{
     
-    images ++;
-    if(images > photos.length -1) {
-      images = 0
+    picture ++;
+    if(picture > data.length -1) {
+      picture = 0
     }
-    return images;
+    return picture;
   }))
  }
 
@@ -52,7 +52,7 @@ return(
 <h2>{id}-{restName}</h2>
 </div>
 <div className="container">
-  <img src={image} width="300px" alt= "restaurant"/>
+  <img src={image} alt= "restaurant"/>
 </div>
 <div className='btn container'>
   <button onClick={backImage}> Back</button>

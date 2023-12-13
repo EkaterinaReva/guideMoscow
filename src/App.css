@@ -39,3 +39,9 @@ p{
   margin: 3px;
 }
 
+img{
+  width: 30%;
+  height: 400px;
+  margin: 0 auto;
+  display: block;
+}
