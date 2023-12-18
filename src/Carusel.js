@@ -3,16 +3,13 @@ export const Carusel= ({images}) => {
 
     
 
-    const [picture, getPicture] = useState(0); 
-    
-
-    const backImage =() => {
+ const [picture, getPicture] = useState(0); 
+const backImage =() => {
         getPicture ((picture => {
           picture --;
           if (picture < 0) {
              return images.length -1;
-            
-          }
+            }
           return picture;
         }))
       }
