@@ -10,7 +10,7 @@ button{
   color: #14471E;
   
   padding: 5px;
-  margin: 30px;
+  margin: 10px;
   text-transform: uppercase;
   margin-top: 20px;
   font-size: 18px;
@@ -24,24 +24,24 @@ button{
   padding: 10px;
 }
 h1{
-  font-size: 30px;
+  font-size: 42px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #C8D2D1;
 }
 h2{
   color: #EE9B01;
+  font-size: 28px;
 }
 p{
   color: #14471E;
   font-weight: bolder;
-  margin: 40px;
-  padding: 10px;
+  padding: 2px;
   margin: 3px;
+  font-size: 18px;
 }
 
 img{
-  width: 30%;
   height: 400px;
   margin: 0 auto;
-  display: block;
+  
 }

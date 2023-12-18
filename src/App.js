@@ -1,34 +1,10 @@
 import { useState } from 'react';
 import { data } from './data';
 import './App.css';
+import { Carusel } from './Carusel';
 
 function App() {
 const [restaurants, setRestaurants] = useState(data);
-
-const [picture, getPicture] = useState(0);
-const{ image } = data[picture];
-
-
-const backImage =() => {
-  getPicture ((picture => {
-    picture --;
-    if (picture < 0) {
-       return data.length -1;
-      
-    }
-    return picture;
-  }))
-}
- const nextImage =() => {
-  getPicture((picture =>{
-    
-    picture ++;
-    if(picture > data.length -1) {
-      picture = 0
-    }
-    return picture;
-  }))
- }
 
 const removeRestaurant=(id) => {
   let newRestaurant= restaurants.filter((restaurant) => restaurant.id !==id);
@@ -43,22 +19,13 @@ return (
 {restaurants.map(( restaurant => {
 const {id, restName, description, image, place} = restaurant;
   
-
-
-
 return(
   <div key={id}>
     <div className="container">
 <h2>{id}-{restName}</h2>
 </div>
-<div className="container">
-  <img src={image} alt= "restaurant"/>
-</div>
-<div className='btn container'>
-  <button onClick={backImage}> Back</button>
-  <button onClick={nextImage}> Next</button>
+<Carusel images={image}/>
 
-</div>
 <div className="container"> 
 <p> {description}</p>
 
