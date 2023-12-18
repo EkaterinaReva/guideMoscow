@@ -25,10 +25,8 @@ return(
 <h2>{id}-{restName}</h2>
 </div>
 <Carusel images={image}/>
-
 <div className="container"> 
 <p> {description}</p>
-
 </div>
 <div className="container">
   <p>{place}</p>
@@ -36,13 +34,10 @@ return(
 <div className="container">
 <button className='btn' onClick={() => removeRestaurant(id)}>Уже посетила</button>
 </div>
-
-  </div>
+</div>
 )  
 }))}
-
-
-    </div>
+</div>
   )
 }
 
